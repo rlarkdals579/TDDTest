@@ -7,9 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class AppTest {
     @Test
     public void 더하기() {
-        int rs = Calculator.run("10 + 20");
+        int rs = Calculator.run("1 + 2");
 
-        assertEquals(30, rs);
+        assertEquals(3, rs);
     }
 
     @Test
@@ -28,8 +28,20 @@ public class AppTest {
 
     @Test
     public void 빼기() {
-        int rs = Calculator.run("10 - 10");
-
-        assertEquals(0, rs);
+        int rs = Calculator.run("1 - 2");
+        assertEquals(-1, rs);
     }
+
+    @Test
+    public void 곱하기() {
+        int rs = Calculator.run("1 * 2");
+        assertEquals(2, rs);
+    }
+
+    @Test
+    public void 나누기() {
+        int rs = Calculator.run("4 / 2");
+        assertEquals(2, rs);
+    }
+
 }
